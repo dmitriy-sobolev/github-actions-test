@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  linux:
+    name: test-exit-code-linux
+    runs-on: ubuntu-latest
+    strategy:
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Run testing
+        shell: bash
+        run: |
+          echo "successful command"
+          source emit-non-zero-exit-code
+          echo "successful command"
+  windows:
+    name: test-exit-code-windows
+    runs-on: windows-2019
+    strategy:
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Run testing
+        shell: cmd
+        run: |
+          echo "successful command"
+          source emit-non-zero-exit-code
+          echo "successful command"
+  macos:
+    name: test-exit-code-macos
+    runs-on: macos-11
+    strategy:
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Run testing
+        shell: cmd
+        run: |
+          echo "successful command"
+          source emit-non-zero-exit-code
+          echo "successful command"
