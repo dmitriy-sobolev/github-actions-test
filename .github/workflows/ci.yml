@@ -14,9 +14,9 @@ jobs:
       - name: Run testing
         shell: bash
         run: |
-          echo "successful command"
+          cd . | echo "clear exit status"
           source emit-non-zero-exit-code
-          echo "successful command"
+          cd . | echo "clear exit status"
   windows:
     name: test-exit-code-windows
     runs-on: windows-2019
@@ -26,9 +26,9 @@ jobs:
       - name: Run testing
         shell: cmd
         run: |
-          echo "successful command"
+          cd . | echo "clear exit status"
           source emit-non-zero-exit-code
-          echo "successful command"
+          cd . | echo "clear exit status"
   macos:
     name: test-exit-code-macos
     runs-on: macos-11
@@ -38,6 +38,6 @@ jobs:
       - name: Run testing
         shell: cmd
         run: |
-          echo "successful command"
+          cd . | echo "clear exit status"
           source emit-non-zero-exit-code
-          echo "successful command"
+          cd . | echo "clear exit status"
