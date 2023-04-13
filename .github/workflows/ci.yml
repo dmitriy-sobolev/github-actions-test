@@ -9,7 +9,6 @@ jobs:
     name: test-exit-code-linux
     runs-on: ubuntu-latest
     strategy:
-    strategy:
       fail-fast: false
     steps:
       - name: Run testing
@@ -22,7 +21,6 @@ jobs:
     name: test-exit-code-windows
     runs-on: windows-2019
     strategy:
-    strategy:
       fail-fast: false
     steps:
       - name: Run testing
@@ -34,7 +32,6 @@ jobs:
   macos:
     name: test-exit-code-macos
     runs-on: macos-11
-    strategy:
     strategy:
       fail-fast: false
     steps:
