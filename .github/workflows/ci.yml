@@ -40,4 +40,4 @@ jobs:
         run: |
           cd . | echo "clear exit status"
           source emit-non-zero-exit-code
-          cd . | echo "clear exit status"
+          cd . | echo "clear exit status" 
